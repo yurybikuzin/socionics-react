@@ -1,0 +1,513 @@
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+  margin:0;
+  padding:0;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+fieldset,img {border:0}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+
+ol,ul {list-style:none}
+
+caption,th {text-align:left}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+
+q:before,q:after {content:''}
+
+abbr,acronym {border:0}
+
+/*
+
+MainPackage->c['body']
+
+*/
+
+body, table {
+  font-size: 8pt;
+  color: #888;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 12px;
+}
+
+td {
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+a, a:visited {
+  color: #1A3DC1;
+}
+
+.error {
+  color: red;
+}
+
+/* ==== selectionIndicator */
+
+.selectionIndicator {
+  margin: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+.selectionIndicator.visibility {
+  visibility: visible;
+}
+
+.selectionIndicator a {
+  background-color: yellow;
+  font-weight: bold;
+  padding: 2px 8px;
+}
+
+/* ==== table */
+
+table.main {
+  min-width: 600px;
+  margin: 15px 0 10px 30px;
+}
+
+/*
+
+CommonPackage->c['PageControl']
+
+  b1 => ${table}
+  b2 => ${tab}
+  b3 => ${selected}
+  b4 => ${to-be-selected}
+  b5 => ${свернуто}
+  b6 => ${свернуть}
+
+*/
+
+.b1 > thead {
+    height: 20px;
+  }
+
+  .b1 > thead > tr > td {
+    vertical-align: bottom;
+  }
+
+  .b1 > tbody > tr > td {
+    border: 1px solid #DDD;
+    -moz-border-radius: 20px;
+  }
+
+  .b2 {
+    position: relative;
+    top: -4px;
+    padding: 4px 6px;
+    margin-left: -1px;
+    border: 1px solid #DDD;
+    border-bottom: none;
+    -moz-border-radius: 10px 10px 0 0;
+  }
+
+  .b3 {
+    top: -6px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .b4 {}
+
+.a0 {
+  margin: 0px 18px 14px;
+}
+
+.a1 .selected {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 2px 4px;
+  margin-left: -4px;
+}
+
+.a1 {
+  margin: 0px 18px 14px;
+}
+
+
+.a1 .col1 {
+  width: 90px
+}
+
+.a1 .col2, .a1 .col3 {
+  width: 80px
+}
+
+.a2 {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.a3 {
+  text-align: left;
+  font-size: 9px;
+  vertical-align: bottom;
+}
+
+.a4 {
+  text-align: left;
+  font-size: 9px;
+  padding: 6px 0 0 20px;
+}
+
+.a5 {
+  padding: 3px 0px;
+}
+
+.a5 * {
+  word-spacing: nowrap;
+}
+
+/*
+
+MainPackage->c['Вкладка "Соционические функции"']
+
+  a16 => ${}
+
+*/
+
+.a16 {
+  margin: 0px 18px 14px;
+}
+
+/*
+
+MainPackage->c['Таблица соционических функций']
+
+  a17 => ${}
+  a18 => ${Краткое название}
+  a19 => ${col "Краткое название"}
+  a20 => ${col "Значок функции"}
+  a21 => ${col "Название"}
+
+*/
+
+.a17 {
+  margin: 20px 30px 10px 0px;
+  width: 280px;
+}
+
+  .a17 td {
+    padding-top: 4px ;
+    padding-bottom: 4px ;
+  }
+
+.a18 {
+  font-size: 14px;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.a19 {
+  width: 90px;
+}
+
+.a20 {
+}
+
+.a21 {
+  width: 170px;
+}
+
+/*
+
+MainPackage->c['Cоционическая функция в таблице']
+
+  a23 => ${selected}
+  a24 => ${Значок функции}
+  a25 => ${Название}
+
+*/
+
+/*  .a23  {
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+  }
+*/
+  .a24 {
+    padding: 2px 0 3px 4px;
+  }
+
+  .a25 {
+    padding-left: 8px;
+    padding-right: 4px;
+  }
+
+.selected  {
+  font-weight: bold;
+  color: black;
+  background-color: yellow;
+}
+
+.a24 {
+  padding: 2px 0 3px 4px;
+}
+
+.a25 {
+  padding-left: 8px;
+  padding-right: 4px;
+}
+
+.icon.selected { background-color: yellow }
+.icon {
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-image: url(/IEPFTRLS.gif);
+}
+.Ne { /* Эстравертная интуиция, (I)ntueor, Интуиция возможностей */
+  background-position: -0px top;
+}
+.Ni { /* Интровертная интуиция, (T)empus, Интуиция времени */
+  background-position: -60px top;
+}
+.Se { /* Экстравертная сенсорика, (F)actor, Силовая сенсорика */
+  background-position: -45px top;
+}
+.Si { /* Интровертная сенсорика, (S)ensus, Сенсорика комфорта */
+  background-position: -105px top;
+}
+.Te { /* Экстравертная логика, (P)rofiteor, Деловая логика */
+  background-position: -30px top;
+}
+.Ti { /* Интровертная логика, (L)ogos, Структурная логика */
+  background-position: -90px top;
+}
+.Fe { /* Экстравертная этика, (E)moveo, Этика эмоций */
+  background-position: -15px top;
+}
+.Fi { /* Интровертная этика, (R)elatio, Этика отношений */
+  background-position: -75px top;
+}
+
+/*
+ MainPackage->c['Вкладка "Интертипные отношения"']
+
+  a30 => ${}
+  a31 => ${table}
+  a32 => ${col "Таблица интертипных отношений"}
+  a33 => ${col "Таблица соционических типов"}
+
+*/
+
+  .a30 {
+    margin-bottom: 10px;
+  }
+
+  .a31 {
+    margin: 5px 18px 10px;
+  }
+
+  .a32 {}
+
+  .a33 {}
+
+
+/*
+
+MainPackage->c['Таблица интертипных отношений']
+
+  a35 => ${}
+  a36 => ${col "Соционическая пара"}
+  a37 => ${col "Соционическая пара не задана"}
+  a38 => ${col "Интертипные отношения"}
+  a39 => ${col "Интертипные отношения, соционическая пара не задана"}
+  a40 => ${selected_td}
+  a41 => ${selected_sr}
+  a42 => ${selected_st_0}
+  a43 => ${selected_st_1}
+  a44 => ${selected_st_2}
+  a45 => ${selected_st_3}
+  a46 => ${selected_st_4}
+  a47 => ${selected_st_5}
+  a48 => ${selected_st_6}
+  a49 => ${selected_st_7}
+  a50 => ${selected_st_8}
+  a51 => ${selected_st_9}
+  a52 => ${selected_st_10}
+  a53 => ${selected_st_11}
+  a54 => ${selected_st_12}
+  a55 => ${selected_st_13}
+  a56 => ${selected_st_14}
+  a57 => ${selected_st_15}
+  a58 => ${st}
+
+*/
+
+  .a35 {
+    line-height: 21px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+    .a35 td {
+      padding-left: 6px;
+    }
+
+  .a36 {
+    width: 172px;
+  }
+
+  .a37 {
+    width: 20px;
+  }
+
+  .a38 {
+    width: 330px;
+  }
+
+  .a39 {
+    width: 220px;
+  }
+
+  .a40 {
+    background-color: yellow;
+  }
+
+  .a41 {
+    color: black;
+    font-weight: bold;
+  }
+
+      .a42 {
+      font-weight: normal;
+      color: #303030;
+    }
+      .a43 {
+      font-weight: normal;
+      color: #8b8b8b;
+    }
+      .a44 {
+      font-weight: normal;
+      color: #9c9c9c;
+    }
+      .a45 {
+      font-weight: normal;
+      color: #a7a7a7;
+    }
+      .a46 {
+      font-weight: normal;
+      color: #aeaeae;
+    }
+      .a47 {
+      font-weight: normal;
+      color: #b4b4b4;
+    }
+      .a48 {
+      font-weight: normal;
+      color: #b8b8b8;
+    }
+      .a49 {
+      font-weight: normal;
+      color: #bcbcbc;
+    }
+      .a50 {
+      font-weight: normal;
+      color: #c0c0c0;
+    }
+      .a51 {
+      font-weight: normal;
+      color: #c3c3c3;
+    }
+      .a52 {
+      font-weight: normal;
+      color: #c5c5c5;
+    }
+      .a53 {
+      font-weight: normal;
+      color: #c8c8c8;
+    }
+      .a54 {
+      font-weight: normal;
+      color: #cacaca;
+    }
+      .a55 {
+      font-weight: normal;
+      color: #cccccc;
+    }
+      .a56 {
+      font-weight: normal;
+      color: #cecece;
+    }
+      .a57 {
+      font-weight: normal;
+      color: #d0d0d0;
+    }
+
+  .a58 {
+    font-weight: normal;
+    color: #333;
+  }
+
+/*body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+*/
