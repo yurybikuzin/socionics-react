@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 // import { increment, decrement, reset } from './actionCreators'
 
 import './index.css';
-import {quadraEnum, eiEnum, eiTitle, pjEnum, pjTitle, quadraField, cpEnum, cpGroups, cpGroupTitle, cpGroupField, cpTitle, tnEnum, itEnum, tnTitle, itTn, itTitle} from './data.js'
+import {quadraEnum, eiEnum, eiTitle, pjEnum, pjTitle, quadraField, sexEnum, cpEnum, cpGroups, cpGroupTitle, cpGroupField, cpTitle, tnEnum, itEnum, tnTitle, itTn, itTitle} from './data.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -29,9 +29,6 @@ class App extends React.Component {
   }
   clearState() {
     this.setState({tn: null, cp: null, it: null, sex: 'male', mad: null});
-  }
-    (state) {
-    this.setState(state)
   }
   render() {
     const pageDef = {
@@ -259,13 +256,13 @@ CpIcon.propTypes = {
   setNewState: PropTypes.func.isRequired,
 }
 
+  // {tn && (<td><TnDescription tn={tn} sex={sex}/></td>)}
 const TnPage = ({tn, sex, setNewState}) => (
 <table className="a0">
   <tbody>
     <tr>
       <td><TnTable tn={tn} setNewState={setNewState}/></td>
     </tr>
-  {tn && (<td><TnDescription tn={tn} sex={sex}/></td>)}
   </tbody>
 </table>
 )
